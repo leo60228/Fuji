@@ -1,0 +1,6 @@
+[submodule "vendor/collage"]
+	path = vendor/collage
+	url = https://github.com/r-lyeh-archived/collage.git
+[submodule "vendor/gzip-hpp"]
+	path = vendor/gzip-hpp
+	url = https://github.com/mapbox/gzip-hpp.git
