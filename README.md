@@ -1,4 +1,6 @@
 # Fuji
+[![works badge](https://cdn.jsdelivr.net/gh/nikku/works-on-my-machine@v0.2.0/badge.svg)](https://github.com/nikku/works-on-my-machine)
+
 A toolkit for porting maps for the game Celeste to the Nintendo Switch. Includes the following:
 
 * Switch Application: A patcher for Celeste's dialog file, so that you don't have to redistribute all of it with your mod.
