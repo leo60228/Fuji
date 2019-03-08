@@ -11,6 +11,7 @@
 #include "collage.hpp"
 #include "gzip/compress.hpp"
 #include "gzip/decompress.hpp"
+#include "libnx_fatdrive.h"
 
 #include "patch_bin.h"
 
@@ -60,6 +61,8 @@ int main(int argc, char **argv) {
   appletInitialize();
   gfxInitDefault();
   consoleInit(NULL);
+
+  usbFsInitialize();
 
   Result rc = romfsInit();
 
@@ -118,7 +121,6 @@ int main(int argc, char **argv) {
 
   romfsExit();
   gfxExit();
-  appletSelfExit();
   return 0;
 }
 

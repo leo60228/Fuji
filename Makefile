@@ -34,7 +34,7 @@ TARGET		:=	$(notdir $(CURDIR))
 BUILD		:=	build
 SOURCES		:=	source vendor/collage
 DATA		:=	data
-INCLUDES	:=	include vendor/collage vendor/gzip-hpp/include
+INCLUDES	:=	include vendor/collage vendor/gzip-hpp/include vendor/fatdrive/
 EXEFS_SRC	:=	exefs_src
 APP_JSON        :=      fuji.json
 #ROMFS	:=	romfs
@@ -63,7 +63,7 @@ CXXFLAGS	:= $(CFLAGS) -std=gnu++17 $(CXXFLAGS)
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=$(DEVKITPRO)/libnx/switch.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
-LIBS	:= -lcurl -lz -lnx
+LIBS	:= -lcurl -lz -lnx_fatdrive -lnx
 
 
 
@@ -71,7 +71,7 @@ LIBS	:= -lcurl -lz -lnx
 # list of directories containing libraries, this must be the top level containing
 # include and lib
 #---------------------------------------------------------------------------------
-LIBDIRS	:= $(PORTLIBS) $(LIBNX)
+LIBDIRS	:= $(PORTLIBS) $(LIBNX) $(CURDIR)/vendor/fatdrive/
 
 
 #---------------------------------------------------------------------------------
